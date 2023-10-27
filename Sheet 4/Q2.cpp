@@ -13,7 +13,7 @@ public:
 	}
 	int fact(int x) {
 		if (x <= 1) return 1;
-		return x * fact(n - 1);
+		return x * fact(x - 1);
 	}
 	int combination(int a, int b) {
 		return (fact(a) / (fact(a - b) * fact(b)));
