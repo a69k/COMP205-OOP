@@ -76,6 +76,6 @@ public:
 
 int main() {
     Matrix matrix1, matrix2;
-  // just the testing 
+  // just the testing part left here
     return 0;
 }

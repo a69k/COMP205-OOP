@@ -116,15 +116,15 @@ int main()
 
   result = data1 += data2;
 
-  // Postfix ++
+  //postfix ++
   data1++;
   data2++;
 
-  // Prefix ++
+  //prefix ++ dr bt2ool da post bs el variable howa ele post nafs el kalam m3 ele fo2
   ++data1;
   ++data2;
 
-  // Greater than (>) for D2
+  //> for D2
   if (data1 > data2)
   {
     cout << "Object 1 has a larger sum of D2 elements." << endl;
