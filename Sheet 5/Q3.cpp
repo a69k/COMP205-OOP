@@ -29,17 +29,18 @@ public:
   }
   
 // the read except last column function
-
-
-
-
-
-
-
-
-    void displayMatrix() {
+    void readMatrix() { // without last column
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m - 1; j++) {
+                cin>> M[i][j];
+            }
+            cout << endl;
+        }
+    }
+
+    void displayMatrix() { 
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
                 cout << M[i][j] << "\t";
             }
             cout << endl;
@@ -65,6 +66,15 @@ public:
     }
 
 // >= for last column function
+    bool operator>=(Matrix A) {
+        double sumLastCol = 0.0;
+        double sumOtherLastCol = 0.0;
+        for (int i = 0; i < n; i++) {
+            sumLastCol += M[i][m - 1];
+            sumOtherLastCol += A.M[i][m - 1];
+        }
+        return sumLastCol >= sumOtherLastCol;
+    }
 
     int rn(){
       return n;
