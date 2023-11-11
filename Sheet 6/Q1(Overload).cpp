@@ -23,7 +23,7 @@ public:
       double fSum=0;
       for (int i=0; i<n; i++){
         for(int j=1; j<i+1; j++){
-          fSum += (A[i],j);
+          fSum += pow(A[i],j);
           }
       }
     }
@@ -53,6 +53,7 @@ public:
    bool operator==(Data D) {
     if(sumB()==D.sumB())
     return true;
+	else
     return false;
   }
 };
@@ -93,5 +94,3 @@ int main() {
 
     system ("pause");
 }
-
-
