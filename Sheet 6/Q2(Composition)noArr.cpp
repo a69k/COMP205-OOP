@@ -5,8 +5,8 @@ class Data{
   string name;
   float age;
   int ID;
-  float salary[5];
-  float tax[5];
+  float salary;
+  float tax;
 
   public:
     friend istream &operator>>(istream &input, Data &D) {
@@ -16,22 +16,19 @@ class Data{
       input >>D.age;
       cout<<"Enter ID:"<<endl;
       input>> D.ID;
-      for (int i = 0; i < 5; i++){
-        cout<<"Enter Salary ["<<i+1<<"]:"<<endl;
-        input >> D.salary[i];
-        cout<<"Enter Tax ["<<i+1<<"]:"<<endl;
-        input >> D.tax[i];
-        if(D.tax[i]>1)
-          D.tax[i] /= 100;
-      }
+      cout<<"Enter Salary:"<<endl;
+      input >> D.salary;
+      cout<<"Enter Tax:"<<endl;
+      input >> D.tax;
+      if(D.tax>1)
+        D.tax /= 100;
+    
       return input;
   }
 
   float netSalary(){
       float netSalary = 0;
-      for (int i = 0; i < 5; i++) {
-          netSalary += salary[i] - (salary[i] * tax[i]);
-      }
+      netSalary = salary - (salary * tax);
       return netSalary;    
   }
 
@@ -44,11 +41,11 @@ class Data{
     int rID(){
       return ID;
     }
-    float rSalary(int i){
-      return salary[i];
+    float rSalary(){
+      return salary;
     }
-    float rTax(int i){
-      return tax[i];
+    float rTax(){
+      return tax;
     }
 };
 
@@ -92,11 +89,7 @@ class Employees{
     cout << "Name\t"<< "Age\t"<< "ID\t"<< "Salary\t"<< "Tax\t"<< "Net Salary"<< endl;
     cout << "-----------------------------------------------------------" << endl;
     for (int i = 0; i < n; i++) {
-        cout << P[i].rName() << "\t" << P[i].rAge() << "\t" << P[i].rID() << "\t";
-        for (int j = 0; j < 5; j++) {
-            cout << P[i].rSalary(j) << "\t" << P[i].rTax(j) << "\t| ";
-        }
-        cout << P[i].netSalary() << endl;
+        cout << P[i].rName() << "\t" << P[i].rAge() << "\t" << P[i].rID() << "\t"<< P[i].rSalary() << "\t" << P[i].rTax() << "\t| "<< P[i].netSalary() << endl;
     }
   }
 
@@ -113,9 +106,9 @@ void compare(Employees A,Employees B){
       totalNSb += B.Ntax[i];
     }
     if (totalNS>totalNSb)
-      cout<<"The first object's net salary is greater than the second object's"<<endl;
+      cout<<"The first object's net salaries are greater than the second object's"<<endl;
     else 
-      cout<<"The second object's net salary is greater than the first object's"<<endl;
+      cout<<"The second object's net salaries are greater than the first object's"<<endl;
 }
 
 int main(){

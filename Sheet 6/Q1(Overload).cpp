@@ -19,14 +19,19 @@ public:
           out << D.A[i];
         return out;
     }
-    double Af(){
+    double Af(int i){
       double fSum=0;
-      for (int i=0; i<n; i++){
+      for (i<n; i++;){
         for(int j=1; j<i+1; j++){
-          fSum += (A[i],j);
+          fSum += pow(A[i],j);
           }
       }
     }
+    void setB(){
+      for (int i=0; i<n; i++)
+        B[i]= Af(i);
+    }
+    
     double sumB(){
       double sumB=0;
       for (int i=0; i<n; i++)

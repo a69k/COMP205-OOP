@@ -19,7 +19,7 @@ public:
   }
 
   void Display() {
-    cout << "Course\tDegree\tCredit" << endl;
+    cout << "Course\t"<<"Degree\t"<<"Credit" << endl;
     for (int i = 0; i < 5; i++) {
       cout << Course[i] << "\t" << Dg[i] << "\t" << Credit[i] << endl;
     }
@@ -51,7 +51,7 @@ public:
       total_c += Credit[i];
     }
 
-    // Calculate GPA
+    // Calculate GPA -- This isnt really how you calculate gpa but the sheet kinda asks for this.
     if (total_d / total_c >= 90) {
       GPA = 'A';
     } else if (total_d / total_c >= 85) {
@@ -85,7 +85,7 @@ int main() {
     students[i].Read();
   }
 
-  cout << "Student Name\tID\tTotal Dg\tTotal Credit\tGPA" << endl;
+  cout << "Student Name\t"<<"ID\t"<<"Total Dg\t"<<"Total Credit\t"<<"GPA"<< endl;
   for (int i = 0; i < n; i++) {
     students[i].Display();
   }
