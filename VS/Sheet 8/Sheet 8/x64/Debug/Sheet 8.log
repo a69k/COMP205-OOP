@@ -1,0 +1,20 @@
+﻿  QRun.cpp
+E:\Code\Yr2\COMP205\Sheet 8\Sheet 8\Q2.h(32,30): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'QRun.cpp')
+  
+E:\Code\Yr2\COMP205\Sheet 8\Sheet 8\Q2.h(32,27): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'QRun.cpp')
+  
+E:\Code\Yr2\COMP205\Sheet 8\Sheet 8\Q2.h(105,36): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'QRun.cpp')
+  
+E:\Code\Yr2\COMP205\Sheet 8\Sheet 8\Q2.h(108,36): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'QRun.cpp')
+  
+E:\Code\Yr2\COMP205\Sheet 8\Sheet 8\Q2.h(119,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'QRun.cpp')
+  
+E:\Code\Yr2\COMP205\Sheet 8\Sheet 8\Q2.h(138,23): warning C4101: 'b3': unreferenced local variable
+  (compiling source file 'QRun.cpp')
+  
+  Sheet 8.vcxproj -> E:\Code\Yr2\COMP205\Sheet 8\x64\Debug\Sheet 8.exe
