@@ -14,30 +14,30 @@ public:
         cin >> H;
     }
 
-    virtual float area() const = 0;
+    virtual float area() = 0;
 
-    void display() const {
+    void display() {
         cout << "Area: " << this->area() << endl;
     }
 };
 
 class Square : virtual public Shape {
 public:
-    float area() const {
+    float area() {
         return L * L;
     }
 };
 
 class Triangle : virtual public Shape {
 public:
-    float area() const {
-        return 0.5 * L * H; // L being the base
+    float area() {
+        return 0.5 * H * L; // L being the base
     }
 };
 
 class SqPyramid : public Square, public Triangle {
 public:
-    float area() const {
+    float area() {
         return Square::area() + (4 * Triangle::area());
     }
 };
@@ -49,13 +49,12 @@ int main() {
     Triangle triangle;
     SqPyramid sqPyramid;
 
+    square.read();  // Read L and H for all shapes once
     shapes[0] = &square;
     shapes[1] = &triangle;
     shapes[2] = &sqPyramid;
 
-
     for (int i = 0; i < 3; ++i) {
-        shapes[i]->read();
         shapes[i]->display();
         cout << endl;
     }

@@ -2,7 +2,7 @@
 #include<math.h>
 using namespace std;
 class Base{
-public:
+protected:
  double B[30],A[30],x;
 	int n;
 public:
@@ -135,7 +135,7 @@ double Difference(){
 	 return sub;
 	}
 }; 
-void main()
+int main()
 {
 
 	Drive1 d1;

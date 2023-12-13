@@ -13,35 +13,34 @@ public:
         cin >> H;
     }
 
-    virtual float calculateArea()=0;
+    virtual float area()=0;
 
-    void displayArea()  {
-       cout << "Area: " << calculateArea() << endl;
+    void display()  {
+       cout << "Area: " << this->area() << endl;
     }
 };
-class Triangle : public virtual  Shape {
+class Triangle : virtual public Shape {
 public:
-    float calculateArea()  {
+    float area()  {
         return 0.5 * L * H;
     }
 };
-class Square : public virtual  Shape {
+class Square : virtual public Shape {
 public:
-    float calculateArea()  {
+    float area()  {
         return L * L;
     }
 };
 
-class SqPyramid : public virtual Square,public virtual Triangle {
+class SqPyramid : virtual public Square, virtual public Triangle {
 public:
-    float calculateArea(){
-		return Square::calculateArea() + Triangle::calculateArea();
+    float area(){
+		return Square::area() + (4*Triangle::area());
     }
 };
 
 void main() {
     
-
     Shape* shapes[3];
 
     Square square;
@@ -54,7 +53,7 @@ void main() {
 
     for (int i = 0; i < 3; ++i) {
         shapes[i]->read();
-        shapes[i]->displayArea();
+        shapes[i]->display();
         cout << endl;
     }
 
