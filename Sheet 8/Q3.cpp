@@ -49,12 +49,12 @@ int main() {
     Triangle triangle;
     SqPyramid sqPyramid;
 
-    square.read();  // Read L and H for all shapes once
     shapes[0] = &square;
     shapes[1] = &triangle;
     shapes[2] = &sqPyramid;
 
     for (int i = 0; i < 3; ++i) {
+        shapes[i]->read();
         shapes[i]->display();
         cout << endl;
     }

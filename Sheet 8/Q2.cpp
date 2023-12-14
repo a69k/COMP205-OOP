@@ -131,7 +131,7 @@ int main(){
 	d.set();
 
 	cout<<"Base Class "<<endl;
-    b=d1;
+    b=d;
 	b.display();
 
 	cout<<"Drive1 Class "<<endl;
